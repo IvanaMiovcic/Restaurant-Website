@@ -580,7 +580,7 @@ footer {
   }
 
   .map {
-    padding-top: 4em;
+    padding: 4em 2em;
   }
 
   .map img {
@@ -621,6 +621,10 @@ footer {
 
   .container-var {
     height: 530px;
+  }
+
+  .map {
+    padding: 4em 2em;
   }
 }
 
