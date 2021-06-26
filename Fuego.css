@@ -498,7 +498,8 @@ footer {
 
   .about p, .contact p {
     font-size: 0.5rem;
-    line-height: 1rem;
+    line-height: 1.1rem;
+    padding: 10px 0;
   }
 
   .header-image {
