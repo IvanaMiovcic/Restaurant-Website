@@ -321,7 +321,7 @@ footer {
 
 .icons p {
   color: white;
-  margin: 2em auto 1em auto;
+  margin: 2em 0 1em 0;
   font-size: 0.9em;
 }
 
@@ -496,8 +496,8 @@ footer {
     padding: 4em 0;
   }
 
-  .about, .contact {
-    width: 60%;
+  .about p, .contact p {
+    font-size: 0.5rem;
   }
 
   .header-image {
