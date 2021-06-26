@@ -496,6 +496,10 @@ footer {
     padding: 4em 0;
   }
 
+  .about, .contact {
+    width: 60%;
+  }
+
   .header-image {
     height: 400px;
   }
@@ -571,7 +575,7 @@ footer {
 
   .right {
     width: 50%;
-    padding: 3em 2em 2em 4em;
+    padding: 3em 2em 2em 8em;
   }
 
   .left {
