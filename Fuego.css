@@ -1,17 +1,18 @@
-* {
+:root {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-  html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-  }
-
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
 :root {
   --font-color: #ff6b06;
@@ -30,6 +31,7 @@ ul {
   list-style-type: none;
   margin-right: 1rem;
   padding: 0;
+  margin: 0;
   float: right;
 }
 
@@ -105,7 +107,7 @@ nav img {
 }
 
 .header-image {
-  background-image: url(header_tacos.jpg);
+  background-image: url(images/header_tacos.jpg);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -134,7 +136,7 @@ nav img {
 
 h1 {
   font-family: 'Raleway', sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   color: var(--font-color);
 }
@@ -271,7 +273,7 @@ h1.title {
 
 .banner {
   width: 100%;
-  background-image: url(taco_banner.jpeg);
+  background-image: url(images/taco_banner.jpeg);
   background-position: center;
   background-size: cover;
   height: 700px;
@@ -321,7 +323,7 @@ footer {
 
 .icons p {
   color: white;
-  margin: 2em 0 1em 0;
+  margin: 1em 0;
   font-size: 0.9em;
 }
 
