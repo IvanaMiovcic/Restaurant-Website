@@ -1,8 +1,9 @@
 :root {
-  margin: 0;
-  padding: 0;
   font-size: 16px;
-  scroll-behavior: smooth;
+  --font-color: #ff6b06;
+  --background-color: #ff6b06;
+  --background-dark: #f3f3f3;
+  --font-light: #333;
 }
 
 html, body {
@@ -12,13 +13,6 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-
-:root {
-  --font-color: #ff6b06;
-  --background-color: #ff6b06;
-  --background-dark: #f3f3f3;
-  --font-light: #333;
 }
 
 nav {
@@ -40,7 +34,6 @@ li {
 }
 
 li a {
-  display: block;
   padding: 1em;
   text-decoration: none;
   color: white;
@@ -51,6 +44,7 @@ li a {
   letter-spacing: 0.2em;
   margin: 1.5rem 0.8rem;
   float: left;
+  display: block;
 }
 
 nav img {
@@ -93,7 +87,6 @@ nav img {
   text-decoration: none;
   display: block;
   float: left;
-
 }
 
 .dropdown img {
@@ -103,7 +96,6 @@ nav img {
 
 .dropdown:hover .drop-content {
   display: block;
-
 }
 
 .header-image {
@@ -264,9 +256,7 @@ h1.title {
   width: 50%;
 }
 
-.map img {
-  width: min(100%, 560px);
-  height: auto;
+iframe {
   overflow: hidden;
   box-shadow: 5px 5px 10px grey;
 }
@@ -281,19 +271,14 @@ h1.title {
 
 .right {
   width: 50%;
-  text-align: left;
   padding: 4em 5em;
 }
 
 .left {
   width: 50%;
-  overflow: hidden;
-}
-
-.left img {
-  width: auto;
-  height: 100%;
-  float: right;
+  background-image: url(images/taco-catering.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 #catering {
@@ -329,23 +314,13 @@ footer {
 
 /*formatting for mobile */
 @media screen and (max-width: 430px)  {
-
   ul, li a, header a {
     display: none;
   }
 
-  p, .icons p, strong {
+  p, .icons p, strong, .box p, h2, span {
     font-size: 0.8rem;
     line-height: 1.75rem;
-  }
-
-  .box p {
-    font-size: 0.8rem;
-    line-height: 1.75rem;
-  }
-
-  .box {
-    height: 180px;
   }
 
   #smaller {
@@ -357,15 +332,11 @@ footer {
     font-size: 1.3rem;
   }
 
-  h2, span {
-    font-size: 0.8rem;
-  }
-
   .box h2 {
     margin: 1rem 0;
   }
 
-  .menu, .about, .contact{
+  .menu, .about, .contact {
     padding: 4em 0;
   }
 
@@ -424,9 +395,9 @@ footer {
     padding-top: 2em;
   }
 
-  .map img {
+  iframe {
     width: 100%;
-    height: auto;
+    height: 350px;
     display: block;
   }
 
@@ -434,7 +405,7 @@ footer {
     display: block;
     height: auto;
     width: 100%;
-    padding: 4em 0 0 0;
+    padding: 3em 0 0 0;
   }
 
   .banner {
@@ -448,18 +419,11 @@ footer {
 
   .right {
     width: 70%;
-    padding: 3em 2em 2em 4em;;
+    padding: 3em 4em;
   }
 
   .left {
-    width: 100%;
-  }
-
-  .left img {
-    width: 100%;
-    height: auto;
-    display: block;
-    float: none;
+    display: none;
   }
 
   .icons img {
@@ -472,17 +436,13 @@ footer {
 }
 
 /* mobile landscape */
-@media screen and (max-width: 746px) and (min-width: 431px) {
+@media screen and (max-width: 746px) and (orientation: landscape) {
 
   ul, li a, header a {
     display: none;
   }
 
-  p, .icons p, strong {
-    font-size: 0.8rem;
-  }
-
-  .box p {
+  p, .icons p, strong, .box p, h2, span {
     font-size: 0.8rem;
   }
 
@@ -490,17 +450,11 @@ footer {
     font-size: 1.5rem;
   }
 
-  h2, span {
-    font-size: 1rem;
-  }
-
   .menu, .about, .contact{
     padding: 4em 0;
   }
 
   .about p, .contact p {
-    font-size: 0.5rem;
-    line-height: 1.1rem;
     padding: 20px 0;
   }
 
@@ -534,7 +488,7 @@ footer {
   }
 
   .box {
-    height: 110px;
+    height: 80px;
   }
 
   #dessert {
@@ -545,27 +499,15 @@ footer {
     padding: 2rem;
   }
 
-  .location_text {
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  .map {
-    width: 100%;
-    padding-top: 1em;
-  }
-
-  .map img {
-    height: 320px;
-    width: 70%;
-    display: block;
-    margin: 0 auto;
-  }
-
   .container {
-    display: block;
-    height: 700px;
-    width: 100%;
+    height: auto;
+    padding: 4em;
+    width: 80%;
+  }
+
+   iframe {
+    height: 320px;
+    width: 320px;
   }
 
   .banner {
@@ -573,24 +515,17 @@ footer {
   }
 
   .container-var {
-    display: block;
     height: auto;
-  }
-
-  .right {
-    width: 50%;
-    padding: 3em 2em 2em 8em;
+    align-items: center;
   }
 
   .left {
-    width: 100%;
+    width: 50%;
+    height: 416px;
   }
 
-  .left img {
-    width: 100%;
-    height: 600px;
-    margin: 0 auto;
-    display: block;
+  .right {
+    padding: 2em;
   }
 
   footer {
@@ -603,15 +538,17 @@ footer {
 
   .container {
     height: 400px;
-    padding: 4em 0 2em 0;
+    width: 80%;
+    padding: 4em 0;
   }
 
   .container-var {
-    height: 560px;
+    height: 460px;
+    align-items: center;
   }
 
   .right {
-    padding: 3em 4em;
+    padding: 3em;
   }
 
   li a {
@@ -628,26 +565,22 @@ footer {
   }
 
   .map {
-    padding: 4em 2em;
+    padding: 2em 1em;
   }
 
-  .map img {
-    height: 250px;
-    width: auto;
+  iframe {
+    height: 350px;
+    width: 350px;
   }
 
   .left {
-    width: 50%;
+    width: 60%;
+    height: 460px;
   }
-
-  .left img {
-    float: center;
-  }
-
 }
 
+/*nav display toggle for smaller screens */
 @media screen and (min-width: 747px) {
-
   .dropdown {
     display: none;
   }
@@ -667,18 +600,18 @@ footer {
   height: 580px;
   }
 
-  .container-var {
-    height: 530px;
+  iframe {
+    height: 400px;
+    width: 400px;
   }
 
-  .map {
-    padding: 3em 2em 4em 2em;
+  .container-var {
+    height: 530px;
   }
 }
 
 /* Formatting for larger screens */
-@media screen and (min-width: 1600px) and (max-width: 1999px) {
-
+@media screen and (min-width: 1600px) {
     nav {
       height: 6.1rem;
     }
@@ -688,42 +621,55 @@ footer {
     }
 
     h2, span {
-      font-size: 1.6rem;
+      font-size: 1.2rem;
     }
 
     .delivery img {
       width: 17%;
     }
 
-    p, .icons p, strong {
-      font-size: 1.1rem;
-    }
-
-    .box p {
-      font-size: 1.1rem;
+    p {
+      font-size: 1rem;
     }
 
     li a {
       font-size: 1rem;
     }
 
+    iframe {
+      height: 500px;
+      width: 600px;
+    }
+
     .container-var, .container {
       height: 600px;
+    }
+
+    .container-var {
+      align-items: center;
+      justify-content: center;
     }
 
     .header-image {
       height: 900px;
     }
 
-    .left img {
-      width: 85%;
-      height: auto;
-      float: right;
+    .left {
+      height: 100%;
+      width: 60%;
+    }
+
+    .about, .contact {
+      padding: 8em 0;
+    }
+
+    .right {
+      padding-left: 200px;
     }
 
 }
 
-@media screen and (min-width: 2000px) and (max-width: 2400px){
+/*@media screen and (min-width: 2000px) {
 
   nav {
     height: 8rem;
@@ -761,7 +707,7 @@ footer {
   height: 1200px;
   }
 
-  .map img {
+  iframe {
   width: 650px;
   }
 
@@ -778,15 +724,10 @@ footer {
   .logo {
   width: 260px;
   }
-
-  .left img {
-    width: 85%;
-    height: auto;
-    float: right;
-  }
  }
+ */
 
-@media screen and (min-width: 2401px) {
+@media screen and (min-width: 2400px) {
 
    nav {
      height: 10rem;
@@ -832,8 +773,9 @@ footer {
       height: 1600px;
     }
 
-   .map img {
-      width: 650px;
+   iframe {
+      width: 750px;
+      height: 600px;
     }
 
    .map {
@@ -862,12 +804,11 @@ footer {
     }
 
    .right {
-      padding: 8em 16em 8em 40em;
+      padding: 8em 10em 8em 20em;
     }
 
-    .left img {
-      width: 60%;
-      height: auto;
+    .left {
+      width: 70%;
     }
 
     .banner {
